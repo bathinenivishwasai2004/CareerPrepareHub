@@ -60,7 +60,7 @@
         const score = s.overallScore != null ? `${s.overallScore}%` : '—';
         const topics = (s.selectedTopics || []).slice(0, 4).join(' · ') + (s.selectedTopics?.length > 4 ? ' ...' : '');
         const canViewReport = s.status === 'completed';
-        const modeBadge = s.mode === 'voice' ? '🎙️ Voice' : '⌨️ Text';
+        const modeBadge = s.mode === 'voice' ? 'Voice' : 'Text';
 
         return `
           <div class="history-card">

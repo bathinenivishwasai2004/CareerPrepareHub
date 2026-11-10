@@ -303,10 +303,10 @@
           body: JSON.stringify({ resumeData: resumeTextarea.value }),
         });
         if (!res.ok) throw new Error('Save failed');
-        resumeStatus.textContent = '✓ Saved';
+        resumeStatus.textContent = 'Saved';
         setTimeout(() => { resumeStatus.textContent = ''; }, 2500);
       } catch (_) {
-        resumeStatus.textContent = '✗ Failed';
+        resumeStatus.textContent = 'Upload failed';
         resumeStatus.style.color = 'var(--danger)';
       } finally {
         saveResumeBtn.disabled = false;

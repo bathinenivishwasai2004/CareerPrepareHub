@@ -87,10 +87,10 @@
   }
 
   function getVerdict(score) {
-    if (score >= 85) return 'Excellent Performance! 🎉';
-    if (score >= 70) return 'Good Performance! 👍';
-    if (score >= 55) return 'Satisfactory — Needs Practice 📈';
-    return 'Needs Improvement 💡';
+    if (score >= 85) return 'Excellent performance';
+    if (score >= 70) return 'Good performance';
+    if (score >= 55) return 'Satisfactory — more practice recommended';
+    return 'More practice recommended';
   }
 
   function renderReport(data) {
@@ -127,17 +127,17 @@
     const dimGrid = document.getElementById('dimGrid');
     if (dimGrid) {
       const scoreCardsContainer = document.createElement('div');
-      scoreCardsContainer.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;grid-column:1/-1;';
+      scoreCardsContainer.className = 'score-summary-grid';
       scoreCardsContainer.innerHTML = `
-        <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;box-shadow:0 2px 10px rgba(15,23,42,0.05);">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;"><i class="fa-solid fa-code"></i> Technical Score</div>
-          <div style="font-size:2.2rem;font-weight:800;color:${getScoreColor(techScore)};line-height:1;">${techScore}</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">/ 100</div>
+        <div class="score-summary-card">
+          <div class="score-summary-label"><i class="fa-solid fa-code"></i> Technical score</div>
+          <div class="score-summary-value" style="color:${getScoreColor(techScore)}">${techScore}</div>
+          <div class="score-summary-max">/ 100</div>
         </div>
-        <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;box-shadow:0 2px 10px rgba(15,23,42,0.05);">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;"><i class="fa-solid fa-comments"></i> Communication Score</div>
-          <div style="font-size:2.2rem;font-weight:800;color:${getScoreColor(commScore)};line-height:1;">${commScore}</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">/ 100</div>
+        <div class="score-summary-card">
+          <div class="score-summary-label"><i class="fa-solid fa-comments"></i> Communication score</div>
+          <div class="score-summary-value" style="color:${getScoreColor(commScore)}">${commScore}</div>
+          <div class="score-summary-max">/ 100</div>
         </div>
       `;
       dimGrid.parentNode.insertBefore(scoreCardsContainer, dimGrid);
@@ -272,7 +272,7 @@
       convLog.innerHTML = messages.map(m => `
         <div class="conv-msg" style="padding:12px 14px;border-bottom:1px solid var(--border);font-size:13px;">
           <div class="conv-msg-role" style="font-weight:700;margin-bottom:4px;color:${m.role === 'interviewer' ? 'var(--primary)' : 'var(--text)'};">
-            ${m.role === 'interviewer' ? '🤖 AI Interviewer' : '👤 You'}
+            ${m.role === 'interviewer' ? 'AI interviewer' : 'You'}
             ${m.questionNumber ? ` · Q${m.questionNumber}` : ''}
             ${m.topic ? ` · <em>${escapeHtml(m.topic)}</em>` : ''}
           </div>

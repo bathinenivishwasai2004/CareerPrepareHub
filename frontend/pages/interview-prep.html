@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Exo+2:wght@400;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/navbar-logo.css">
   <link rel="stylesheet" href="../assets/css/interview-prep.css">
+  <link rel="stylesheet" href="../assets/css/design-system.css">
 </head>
 <body>
 
@@ -70,7 +71,7 @@
       <div class="prep-hero-inner">
         <div class="prep-badge">
           <i class="fa-solid fa-robot"></i>
-          AI POWERED
+          Interview practice
         </div>
         <h1>Interview Preparation</h1>
         <p class="prep-subtitle">Choose your interview mode. Upload your resume for personalized, project-based questions. Get AI-generated performance reports with technical and communication scores.</p>
@@ -94,24 +95,24 @@
     <!-- Interview Mode Cards -->
     <section class="modes-section">
       <div class="prep-container">
-        <div class="section-label">SELECT INTERVIEW MODE</div>
+        <div class="section-label">Choose an interview mode</div>
 
         <!-- Voice Mode Feature Banner -->
-        <div style="background:linear-gradient(135deg, rgba(37,99,235,0.08), rgba(168,85,247,0.08)); border:1px solid rgba(37,99,235,0.2); border-radius:16px; padding:20px 24px; margin-bottom:32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
-          <div style="display:flex; align-items:center; gap:16px;">
-            <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg, #2563eb, #7c3aed); color:#fff; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0;">
+        <div class="voice-mode-banner">
+          <div class="voice-mode-message">
+            <div class="voice-mode-icon">
               <i class="fa-solid fa-microphone"></i>
             </div>
             <div>
-              <div style="font-weight:700; font-size:16px; color:var(--text);">🎙️ New: Voice Interview Mode Available</div>
-              <div style="font-size:13px; color:var(--text-muted); margin-top:2px;">Speak your answers naturally with real-time speech-to-text, editable transcripts, and AI question read-aloud!</div>
+              <div class="voice-mode-title">Voice interview mode</div>
+              <div class="voice-mode-description">Answer aloud with live transcription, editable transcripts, and spoken questions.</div>
             </div>
           </div>
-          <div style="display:flex; gap:10px;">
-            <a href="mock-interview.html?interviewMode=voice" class="btn btn-primary" style="padding:10px 18px; font-size:13px; font-weight:600;">
+          <div class="voice-mode-actions">
+            <a href="mock-interview.html?interviewMode=voice" class="btn btn-primary">
               <i class="fa-solid fa-microphone"></i> Try Voice Mode
             </a>
-            <a href="mock-interview.html?interviewMode=text" class="btn btn-secondary" style="padding:10px 18px; font-size:13px; font-weight:600;">
+            <a href="mock-interview.html?interviewMode=text" class="btn btn-secondary">
               <i class="fa-solid fa-keyboard"></i> Text Mode
             </a>
           </div>
@@ -126,7 +127,7 @@
               <div class="mode-icon icon-blue">
                 <i class="fa-solid fa-code"></i>
               </div>
-              <div class="mode-badge badge-blue">TECHNICAL</div>
+              <div class="mode-badge badge-blue">Technical</div>
               <h2 class="mode-title">Technical Interview</h2>
               <p class="mode-desc">Select your technical topics. The AI will ask conceptual, problem-solving, and depth-of-knowledge questions strictly on your chosen subjects.</p>
               <div class="mode-features">
@@ -156,12 +157,12 @@
           <!-- Resume-Based Interview -->
           <div class="mode-card mode-card-featured" id="card-resume">
             <div class="mode-card-accent accent-purple"></div>
-            <div class="mode-popular-badge">MOST PERSONALIZED</div>
+            <div class="mode-popular-badge">Personalized questions</div>
             <div class="mode-card-body">
               <div class="mode-icon icon-purple">
                 <i class="fa-solid fa-file-user"></i>
               </div>
-              <div class="mode-badge badge-purple">RESUME BASED</div>
+              <div class="mode-badge badge-purple">Resume based</div>
               <h2 class="mode-title">Resume-Based Interview</h2>
               <p class="mode-desc">Upload your resume PDF. The AI will ask questions specifically about your projects, skills, experience, and technology choices mentioned in your resume.</p>
               <div class="mode-features">
@@ -195,7 +196,7 @@
               <div class="mode-icon icon-indigo">
                 <i class="fa-solid fa-layer-group"></i>
               </div>
-              <div class="mode-badge badge-indigo">COMBINED</div>
+              <div class="mode-badge badge-indigo">Combined</div>
               <h2 class="mode-title">Resume + Technical</h2>
               <p class="mode-desc">The most comprehensive interview. Combines your resume projects with selected technical topics for a fully personalized, real-world interview experience.</p>
               <div class="mode-features">
@@ -263,7 +264,7 @@
     <!-- How it Works -->
     <section class="how-it-works-section">
       <div class="prep-container">
-        <div class="section-label">HOW IT WORKS</div>
+        <div class="section-label">How it works</div>
         <h2 class="section-title">A Real Personalized AI Interview</h2>
         <div class="steps-grid">
           <div class="step-card">
@@ -362,4 +363,3 @@
   <script src="../assets/js/interview-prep.js"></script>
 </body>
 </html>
-

@@ -144,7 +144,7 @@
 
     div.innerHTML = `
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-        <span class="msg-label">${isAI ? '🤖 Interviewer' : 'You'}</span>
+        <span class="msg-label">${isAI ? 'Interviewer' : 'You'}</span>
         ${ttsBtnHtml}
       </div>
       <div class="msg-bubble">${escapeHtml(content)}</div>
@@ -174,7 +174,7 @@
     div.className = 'msg ai';
     div.id = 'typingIndicator';
     div.innerHTML = `
-      <span class="msg-label">🤖 Interviewer</span>
+      <span class="msg-label">Interviewer</span>
       <div class="msg-bubble typing-indicator">
         <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
       </div>`;
@@ -197,7 +197,7 @@
   function setupModeUI(mode) {
     activeMode = mode || 'text';
     if (activeMode === 'voice') {
-      if (sideMode) sideMode.textContent = '🎙️ Voice';
+      if (sideMode) sideMode.textContent = 'Voice';
       if (chatModeBadge) {
         chatModeBadge.className = 'badge';
         chatModeBadge.style.background = 'rgba(239,68,68,0.1)';
@@ -209,7 +209,7 @@
       voiceAnswerContainer.classList.remove('hidden');
       initSpeechRecognition();
     } else {
-      if (sideMode) sideMode.textContent = '⌨️ Text';
+      if (sideMode) sideMode.textContent = 'Text';
       if (chatModeBadge) {
         chatModeBadge.className = 'badge';
         chatModeBadge.style.background = '';

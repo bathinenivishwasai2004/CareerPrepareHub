@@ -274,9 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (selectedAnswer === question.answer) {
-      setSubmitFeedback('✅ Correct answer! Great job.', 'correct');
+      setSubmitFeedback('Correct answer. Well done.', 'correct');
     } else {
-      setSubmitFeedback('❌ Incorrect answer. Try once more or click Show Answer.', 'wrong');
+      setSubmitFeedback('Incorrect answer. Try again or select Show Answer.', 'wrong');
     }
   });
 
